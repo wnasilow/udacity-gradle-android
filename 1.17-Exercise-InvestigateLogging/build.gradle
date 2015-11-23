@@ -28,8 +28,10 @@ task hello(type: HelloTask)
 class HelloTask extends DefaultTask {
     @TaskAction
     void doAction() {
-        println 'Hello World'
-    }
+        logger.info 'hello info1'
+        logger.lifecycle 'Hello World'
+	    logger.info 'hello info2'
+	}
 }
 
 /*
